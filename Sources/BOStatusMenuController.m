@@ -15,6 +15,7 @@
 #import "BOTaskAdditions.h"
 #import "NSApplication+LoginItems.h"
 #import <Sparkle/Sparkle.h>
+#import "DDHotKeyCenter.h"
 
 #define BOPrefsLaunchAtStartup	@"LaunchAtStartup"
 
@@ -138,6 +139,13 @@
 			[menuItem setAction:@selector(bootWindows:)];
 			[menuItem setSubmenu:nil];
 			[menuItem setRepresentedObject:[media lastObject]];
+            
+            // Set shortcut.
+            [menuItem setKeyEquivalent:@"w"];
+            [menuItem setKeyEquivalentModifierMask:NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask];
+            DDHotKeyCenter *hotKeyCenter = [DDHotKeyCenter sharedHotKeyCenter];
+            [hotKeyCenter registerHotKeyWithKeyCode:13 modifierFlags:NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask
+                                             target:self action:@selector(bootWindows:) object:menuItem];
 		} else {
 			// multiple media
 			NSMenu *submenu = [[NSMenu alloc] init];
