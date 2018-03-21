@@ -24,7 +24,7 @@
     NSStatusItem *statusItem;
     NSMenuItem *bootMenuItem;
     NSMenuItem *altBootMenuItem;
-    SUUpdater *updater;
+//    SUUpdater *updater;
     dispatch_once_t _checkedEFIDiskToken;
     NSString* _bootableEFIDisk;
     dispatch_queue_t _queue;
@@ -283,8 +283,8 @@
 		[menuItem setState:NSOnState];
     }
 
-	[menu addItemWithTitle:NSLocalizedString(@"BootChamp Help", "help menu item") action:@selector(showHelp:) keyEquivalent:@""];
-	[menu addItemWithTitle:NSLocalizedString(@"Check for Updates\u2026", "check for updates menu item") action:@selector(checkforUpdates:) keyEquivalent:@""];
+//    [menu addItemWithTitle:NSLocalizedString(@"BootChamp Help", "help menu item") action:@selector(showHelp:) keyEquivalent:@""];
+//    [menu addItemWithTitle:NSLocalizedString(@"Check for Updates\u2026", "check for updates menu item") action:@selector(checkforUpdates:) keyEquivalent:@""];
     [menu addItemWithTitle:NSLocalizedString(@"About BootChamp", "about menu item") action:@selector(showAbout:) keyEquivalent:@""];
 	[menu addItem:[NSMenuItem separatorItem]];
 	[menu addItemWithTitle:NSLocalizedString(@"Quit", "quit menu item") action:@selector(quit:) keyEquivalent:@""];
@@ -294,7 +294,7 @@
 	
 	[self checkPrefs];
     
-    updater = [SUUpdater sharedUpdater];
+//    updater = [SUUpdater sharedUpdater];
 }
 
 - (void)bootWindows:(id)sender
@@ -340,12 +340,12 @@
 	}
 }
 
-- (void)showHelp:(id __unused)sender
-{
-	[NSApp activateIgnoringOtherApps:YES];
-	NSURL *helpURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"help.htm" ofType:nil]];
-	[[NSWorkspace sharedWorkspace] openURLs:@[helpURL] withAppBundleIdentifier:@"com.apple.helpviewer" options:NSWorkspaceLaunchDefault additionalEventParamDescriptor:nil launchIdentifiers:NULL];
-}
+//- (void)showHelp:(id __unused)sender
+//{
+//    [NSApp activateIgnoringOtherApps:YES];
+//    NSURL *helpURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"help.htm" ofType:nil]];
+//    [[NSWorkspace sharedWorkspace] openURLs:@[helpURL] withAppBundleIdentifier:@"com.apple.helpviewer" options:NSWorkspaceLaunchDefault additionalEventParamDescriptor:nil launchIdentifiers:NULL];
+//}
 
 - (void)preferenceAction:(id __unused)sender
 {
@@ -357,10 +357,10 @@
 	[self checkPrefs];
 }
 
-- (void)checkforUpdates:(id)sender
-{
-    [updater checkForUpdates:sender];
-}
+//- (void)checkforUpdates:(id)sender
+//{
+//    [updater checkForUpdates:sender];
+//}
 
 - (void)quit:(id __unused)sender
 {

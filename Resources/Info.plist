@@ -11,21 +11,21 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>BootChamp for Security Hazard Junkies</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.1</string>
+	<string>1.8</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.1</string>
+	<string>1.8</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.6.8</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© Kevin Wojniak, 2007-2015</string>
+	<string>Copyright © 2007-2015 Kevin Wojniak, Modified by Sungho Lee, 2018</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
