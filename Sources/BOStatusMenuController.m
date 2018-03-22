@@ -141,10 +141,10 @@
 			[menuItem setRepresentedObject:[media lastObject]];
             
             // Set shortcut.
-            [menuItem setKeyEquivalent:@"w"];
+            [menuItem setKeyEquivalent:@"b"];
             [menuItem setKeyEquivalentModifierMask:NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask];
             DDHotKeyCenter *hotKeyCenter = [DDHotKeyCenter sharedHotKeyCenter];
-            [hotKeyCenter registerHotKeyWithKeyCode:13 modifierFlags:NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask
+            [hotKeyCenter registerHotKeyWithKeyCode:11 modifierFlags:NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask
                                              target:self action:@selector(bootWindows:) object:menuItem];
 		} else {
 			// multiple media
